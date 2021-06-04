@@ -25,6 +25,7 @@ public class TestController {
 
     @GetMapping("user")
     public List<User> getUser() {
+        System.out.println("1111111");
         return userService.getUser();
     }
 }
