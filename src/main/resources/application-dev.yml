@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.62.236:3306/test_db?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: Ye@h0_2021
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,wall,log4j
