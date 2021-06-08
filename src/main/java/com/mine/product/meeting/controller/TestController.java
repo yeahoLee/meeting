@@ -1,13 +1,12 @@
 package com.mine.product.meeting.controller;
 
-import com.mine.product.meeting.entity.user.User;
-import com.mine.product.meeting.service.IUserService;
+import com.mine.base.user.dto.UserInfoDto;
+import com.mine.product.meeting.entity.Meeting;
+import com.mine.product.meeting.service.ITestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @author ：Yeaho_Lee
@@ -19,13 +18,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/test/")
 public class TestController {
-    
     @Autowired
-    private IUserService userService;
+    private ITestService testService;
 
-    @GetMapping("user")
-    public List<User> getUser() {
-        System.out.println("1111111");
-        return userService.getUser();
+    @GetMapping("aa")
+    public Meeting get() {
+        return testService.get();
+    }
+    @GetMapping("aa1")
+    public UserInfoDto get1() {
+        return testService.get1();
     }
 }

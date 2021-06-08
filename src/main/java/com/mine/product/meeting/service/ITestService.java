@@ -1,8 +1,7 @@
 package com.mine.product.meeting.service;
 
-import com.mine.product.meeting.entity.user.User;
-
-import java.util.List;
+import com.mine.base.user.dto.UserInfoDto;
+import com.mine.product.meeting.entity.Meeting;
 
 /**
  * @author ：Yeaho_Lee
@@ -11,6 +10,8 @@ import java.util.List;
  * @modified By：
  * @version: $
  */
-public interface IUserService {
-    List<User> getUser();
+public interface ITestService {
+    Meeting get();
+
+    UserInfoDto get1();
 }

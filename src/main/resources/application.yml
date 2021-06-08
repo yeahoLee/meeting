@@ -1,11 +1,8 @@
 spring:
   profiles:
     active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
-mybatis:
-  mapper-locations: classpath*:mapping/*/*Mapping.xml
-  type-aliases-package: com.mine.product.meeting.entity
-
-logging:
-  level:
-    root: info

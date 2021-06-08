@@ -3,9 +3,18 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.224.62.236:3306/test_db?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: Ye@h0_2021
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.10.237:1521:HYYC
+    username: hyadmin
+    password: hy237
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat,wall,log4j
+
+dubbo:
+  zookeeper:
+    address: 192.168.10.60:2181
+  interface:
+    version: 0.4.1
+
+logging:
+  home: E:/meet-log
